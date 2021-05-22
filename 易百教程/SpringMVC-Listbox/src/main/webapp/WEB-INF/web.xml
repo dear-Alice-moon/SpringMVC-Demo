@@ -1,0 +1,60 @@
+<!-- web-app标签中各个参数的顺序不可变，否则会报错! 2019/05/15 21:48 关于web-app标签中的属性元素，必须添加，否则 
+	EL表达式无法识别! 2019/01/02 14:44 -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	id="WebApp_ID" version="2.4">
+
+	<display-name>Archetype Created Web Application</display-name>
+
+
+	<servlet>
+		<!-- 'Listbox'值来自 webapp/WEB-INF下的 Listbox-servlet.xml文件名 -->
+		<servlet-name>Listbox</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Listbox</servlet-name>
+		<url-pattern>/</url-pattern>
+		<!-- <url-pattern>*.jsp</url-pattern> -->
+	</servlet-mapping>
+
+
+	<!-- 若不想使用默认文件名为[servlet-name]-servlet.xml和默认位置为WebContent/WEB-INF， 
+		可以通过在web.xml文件中添加servlet侦听器ContextLoaderListener来自定义此文件名和位置. 
+	 -->
+	<!-- DispatcherServlet definition goes here -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/Listbox-servlet.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+	<!-- 设置项目启动时编码，否则前端页面会显示中文乱码. Tomcat默认是以 'ISO-8859-1' 编码格式启动. -->
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+</web-app>

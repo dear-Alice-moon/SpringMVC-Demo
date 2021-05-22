@@ -1,0 +1,7 @@
+
+1、本项目来源网址--易百教程：https://www.yiibai.com/spring_mvc/springmvc_checkbox.html         
+                                                    -- @author moon  2019/05/23  10:48    
+
+2、访问地址： http://localhost:8080/SpringMVC-Checkbox/user                                                   
+                                                    
+                                                    

@@ -1,0 +1,9 @@
+
+1、本项目来源网址--易百教程： https://www.yiibai.com/spring_mvc/springmvc_rss_feed.html           
+                                                    -- @author moon  2019/06/11  20:27             
+
+2、访问地址：  http://localhost:8080/SpringMVC-GenerateRSSFeed/rssfeed                      
+                                                       
+3、参考网址：                           
+
+                                                  

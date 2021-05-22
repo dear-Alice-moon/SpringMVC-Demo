@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	
+	<bean id="itemBean" class="com.moon.el.core.Item">
+	</bean>
+	
+	<bean id="itemBean2" class="com.moon.el.core.Item">
+		<property name="name" value="飞鹰"/>
+		<property name="qty" value="16"/>
+	</bean>
+	
+	<bean id="customerBean" class="com.moon.el.core.Customer">
+		<property name="item" value="#{itemBean}" />
+		<property name="itemName" value="#{itemBean.name}" />
+	</bean>
+	
+	<bean id="customerBean2" class="com.moon.el.core.Customer">
+		<property name="item" value="#{itemBean2}" />
+		<property name="itemName" value="#{itemBean2.name}" />
+	</bean>
+	
+</beans>

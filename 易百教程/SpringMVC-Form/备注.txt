@@ -1,0 +1,11 @@
+
+1、本项目来源网址--易百教程： https://www.yiibai.com/spring_mvc/spring-4-mvc-form-validation.html
+                                                                  -- @author moon  2019/06/25  21:01           
+
+2、说明：将项目打成war包，部署到Tomcat/webapp目录下，之后启动Tomcat，到浏览器中访问即可。
+                         
+3、访问地址：http://localhost:8080/SpringMVC-Form/
+                                                        
+4、参考网址：                           
+
+                             

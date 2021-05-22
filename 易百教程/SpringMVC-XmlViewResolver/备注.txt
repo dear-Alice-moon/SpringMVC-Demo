@@ -1,0 +1,11 @@
+
+1、本项目来源网址--易百教程： https://www.yiibai.com/spring_mvc/springmvc_xmlviewresolver.html           
+                                                    -- @author moon  2019/05/30  17:29         
+
+2、访问地址： http://localhost:8080/SpringMVC-XmlViewResolver/hello                                                    
+                                                       
+3、参考网址： https://www.cnblogs.com/liruiloveparents/p/5054702.html                          
+
+
+
+                                                    

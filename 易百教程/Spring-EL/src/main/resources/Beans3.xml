@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	
+	<bean id="customerBean5" class="com.moon.el.core.Customer4">
+		<property name="address" value="#{addressBean2}" />
+		<property name="country" value="#{addressBean2.country}" />
+		<property name="fullAddress" value="#{addressBean2.getFullAddress('moon')}" />
+	</bean>
+	
+	<bean id="addressBean2" class="com.moon.el.core.Address2">
+		<property name="street" value="中原街，太平门" />
+		<property name="postCode" value="154000" />
+		<property name="country" value="CN" />
+	</bean>
+	
+</beans>
